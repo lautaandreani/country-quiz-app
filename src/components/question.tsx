@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes } from 'react'
 
 import { Icons } from '@/lib/icons'
-import { QuestionOption, QuestionFlag } from '@/models/question.model'
+import { QuestionOption as IQuestionOption, QuestionFlag } from '@/models/question.model'
 import Image from 'next/image'
 
 const QuestionTitle = ({ title, flag }: { title: string; flag: QuestionFlag }) => {
@@ -14,7 +14,7 @@ const QuestionTitle = ({ title, flag }: { title: string; flag: QuestionFlag }) =
 }
 
 interface QuestionOptionsProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  option: QuestionOption
+  option: IQuestionOption
   currentQuestionAnswer: { questionId: string; answerId: string } | undefined
   correctOptionId: string
 }
